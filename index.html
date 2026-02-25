@@ -13,132 +13,1335 @@
 
 </head>
 
-<body>
-<!----------Navigation Bar------------>
-    <nav class="navbar sticky-top">
-        <div class="container-fulid row align-items-center w-100 mx-auto px-4">
+    <body >
+        <!----------Navigation Bar------------>
+        <nav class="navbar">
+        <div class="nav-container">
 
             <!-- Logo Left -->
-            <div class="col-2 d-flex justify-content-start">
-                <img src="image/main_logo.png" alt="Logo" class="logo" width="100">
+            <div class="nav-logo-left">
+                <img src="image/main_logo.png" alt="Logo" class="logo">
             </div>
 
-            <!-- Nav + Buttons Center -->
-            <div class="col-8 d-flex justify-content-center align-items-center">
+            <!-- Desktop Nav Links (center) -->
+            <div class="desktop-nav">
                 <ul class="navbar-nav flex-row gap-4 align-items-center">
                     <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" style="text-decoration: underline;">Buy</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" style="text-decoration: underline;">Rent</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" style="text-decoration:underline;">Buy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" style="text-decoration:underline;">Rent</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">EMI Calculator</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
                     <li class="nav-item">
                         <a href="#" class="btn nav-btn">
-                            <img src="icons/famicons_person.png" class="nav-icon" alt="user">
+                            <img src="icons/famicons_person.png" class="icon" alt="user">
                             Sign In / Sign Up
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="btn nav-btn nav-btn-outline">
-                            <img src="icons/stash_pencil-writing-light.png" class="nav-icon" alt="listing">
+                        <a href="#" class="btn nav-btn">
+                            <img src="icons/stash_pencil-writing-light.png" class="icon" alt="listing">
                             Free Listing
                         </a>
                     </li>
                 </ul>
             </div>
-            <!-- Logo Right -->
-            <div class="col-2 d-flex justify-content-end">
-                <img src="image/negi_logo.png" alt="Logo" class="logo" width="100">
+
+            <!-- Logo Right (desktop only) -->
+            <div class="nav-logo-right">
+                <img src="image/negi_logo.png" alt="Logo" class="logo">
             </div>
 
+            <!-- Hamburger Button (mobile only) -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#" style="text-decoration:underline;">Buy</a></li>
+                <li><a href="#" style="text-decoration:underline;">Rent</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">EMI Calculator</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li>
+                    <a href="#" class="mobile-btn">
+                        <img src="icons/famicons_person.png" class="icon" alt="user">
+                        Sign In / Sign Up
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="mobile-btn mobile-btn">
+                        <img src="icons/stash_pencil-writing-light.png" class="icon" alt="listing">
+                        Free Listing
+                    </a>
+                </li>
+            </ul>
         </div>
     </nav>
+        <!------------------- HERO ------------------------>
+        <section class="hero">
+        <div class="container-fluid px-0">
+            <div class="row">
+            <!-- Left content -->
+            <div class="col-lg-5 d-flex align-items-center ">
+                <div >
+                    <h1>Your Trusted<br>Real Estate Partner</h1>
+                    <p>Buy, sell, or rent with confidence and transparency.</p>
 
-<!------------ HERO ------------>
-    <section class="hero">
-    <div class="container-fluid px-0">
-        <div class="row">
-        <!-- Left content -->
-        <div class="col-lg-5 d-flex align-items-center ">
-            <div >
-                <h1>Your Trusted<br>Real Estate Partner</h1>
-                <p>Buy, sell, or rent with confidence and transparency.</p>
+                    <!-- Search Tabs -->
+                    <ul class="nav search-tabs mb-0 gap-2">
+                        <li class="nav-item"><a class="nav-link active" href="#">Sell</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Rent</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Property by Area</a></li>
+                    </ul>
+                    <div class="search-box gap-2">
+                        <div class="dropdown align-center col-3">
+                            <button class="search-select dropdown-toggle gap-2" data-bs-toggle="dropdown">
+                                    <img src="icons/solar_home-2-linear.png" class="icon" alt="listing">
+                                    Property Type
+                                    <img src="icons/weui_arrow-outlined.png" class="icon" alt="dropdown">
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">House</a></li>
+                                <li><a class="dropdown-item" href="#">Flat</a></li>
+                                <li><a class="dropdown-item" href="#">Land</a></li>
+                            </ul>
+                        </div>
 
-                <!-- Search Tabs -->
-                <ul class="nav search-tabs mb-0 gap-2">
-                    <li class="nav-item"><a class="nav-link active" href="#">Sell</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Rent</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Property by Area</a></li>
-                </ul>
-                <div class="search-box gap-2">
-                    <div class="dropdown align-center col-3">
-                        <button class="search-select dropdown-toggle" data-bs-toggle="dropdown">
-                           Property Type
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">House</a></li>
-                            <li><a class="dropdown-item" href="#">Flat</a></li>
-                            <li><a class="dropdown-item" href="#">Land</a></li>
-                        </ul>
+                        <div class="dropdown">
+                            <button class="search-select dropdown-toggle gap-2" data-bs-toggle="dropdown">
+                                    <img src="icons/ph_money-light.png" class="icon" alt="listing">
+                                    Budgets
+                                    <img src="icons/weui_arrow-outlined.png" class="icon" alt="dropdown">
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Under 1 Lakh</a></li>
+                                <li><a class="dropdown-item" href="#">Under 50 Lakh</a></li>
+                                <li><a class="dropdown-item" href="#">Under 1 Cr</a></li>
+                            </ul>
+                        </div>
+
+                        <button class="btn-search">Search</button>
                     </div>
-
-                    <div class="dropdown">
-                        <button class="search-select dropdown-toggle" data-bs-toggle="dropdown">
-                           Budgets
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Under 1 Lakh</a></li>
-                            <li><a class="dropdown-item" href="#">Under 50 Lakh</a></li>
-                            <li><a class="dropdown-item" href="#">Under 1 Cr</a></li>
-                        </ul>
-                    </div>
-
-                    <button class="btn-search">Search</button>
                 </div>
             </div>
-        </div>
 
-        <!-- Right image -->
-        <div class="col-lg-7 px-0">
-            <img src="image/la2-scaled.webp"
-                alt="Aerial city view" class="hero-img" />
-        </div>
-        </div>
-    </div>
-    </section>
-
-
-<!------------ Sale Section ------------->
-<section class="container py-5">
-    <div class="d-flex justify-content-between align-items-center mb-3">
-        <h2 class="section-title mb-0">Sale</h2>
-        <a href="#" class="view-all">View all</a>
-    </div>
-
-    <div class="row row-cols-2 row-cols-md-4 g-3">
-        <!-- Card -->
-        <div class="col " id="property-cards">
-            <div class="property-card position-relative">
-                <span class="card-badge">Sale</span>
-                <img src="image/1695.jpg" class="card-img" alt="Property">
-                <div class="card-body">
-                    <div class="property-location"> Gahanapokhari</div>
-                    <div class="property-name">New Commercial Land</div>
-                    <div class="property-area">
-                        <span> 5 ropani</span>
-                    </div>
-                    <div class="property-details">
-                        <span>2 Bathroom</span>
-                        <span>1 Kitchen</span>
-                        <span>1 Bedroom</span>
-                    </div>
-                    <div class="property-price">Price On Call</div>
-                </div>
+            <!-- Right image -->
+            <div class="col-lg-7 px-0">
+                <img src="image/la2-scaled.webp"
+                    alt="Aerial city view" class="hero-img" />
+            </div>
             </div>
         </div>
-    </div>
-</section>
-<script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js" integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</body>
+        </section>
+
+        <!------------ Sale Section ------------->
+        <section class="container py-5 d-flex flex-column gap-4">
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="section-title">Sale</h2>
+                <a href="#" class="view-all align-bottom">View all 
+                    <img src="icons/side arrow.png" class="icon" alt="arrow">
+                </a>
+            </div>
+
+            <div class="carousel-wrapper">
+                <div id="Carousel" class="carousel slide property-carousel" data-bs-ride="false">
+                    <div class="carousel-inner">
+
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="row g-3">
+
+                                <!------------- Card 1 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Sale</span>
+                                        <img src="image/1695.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Gahanapokhari
+                                                </div>
+                                                <div class="property-name">New Commercial Land</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 5 ropani 3 Anna</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> Price On Call</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 2 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Sale</span>
+                                        <img src="image/clubhouse-tewksbury-usa.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Baneshwor
+                                                </div>
+                                                <div class="property-name">Modern Apartment</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 4-0-0-7</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> Price On Call</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 3 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Sale</span>
+                                        <img src="image/three-highend-luxury-townhouses-with-europeanstyle-architecture-stone-exterior-walls.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Bhaisepati
+                                                </div>
+                                                <div class="property-name">Land at Khoicha</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 0-9-2-4</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> NRS 90L / Anna</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 4 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Sale</span>
+                                        <img src="image/1695.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Gahanapokhari
+                                                </div>
+                                                <div class="property-name">Land Near Global College</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 0-22-1-0</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> NRS 1 Cr 20 Lakh / Anna</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- END Slide 1 -->
+
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="row g-3">
+                                <!------------- Card 5 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Sale</span>
+                                        <img src="image/front-white-house-with-blue-fence.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Gahanapokhari
+                                                </div>
+                                                <div class="property-name">Land near Bhaisipati Area</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 5 ropani 3 Anna</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> Price On Call</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 6 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Sale</span>
+                                        <img src="image/detailed-view-windows-doors-balconies-city-buildings.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Baneshwor
+                                                </div>
+                                                <div class="property-name">Modern Apartment</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 4-0-0-7</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> Price On Call</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 7 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Sale</span>
+                                        <img src="image/image 2.png" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Bhaisepati
+                                                </div>
+                                                <div class="property-name">Building in Khoicha</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 0-9-2-4</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> NRS 90L / Anna</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 8 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Sale</span>
+                                        <img src="image/modern-residential-district-with-blue-roof-balcony.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Gahanapokhari
+                                                </div>
+                                                <div class="property-name">Residential Area</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 0-22-1-0</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> NRS 1 Cr 20 Lakh / Anna</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- END Slide 2 -->
+
+                    </div>
+                    <!-- END carousel-inner -->
+
+                    <!-- Prev / Next Buttons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#Carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#Carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+
+                </div>
+            </div>
+            <!-- END carousel-wrapper -->
+
+        </section>
+
+        <!------------ Rent Section ------------->
+        <section class="container py-5 d-flex flex-column gap-4">
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="section-title">Rent</h2>
+                <a href="#" class="view-all align-bottom">View all 
+                    <img src="icons/side arrow.png" class="icon" alt="arrow">
+                </a>
+            </div>
+
+            <div class="carousel-wrapper">
+                <div id="rentCarousel" class="carousel slide property-carousel" data-bs-ride="false">
+                    <div class="carousel-inner">
+
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="row g-3">
+
+                                <!------------- Card 1 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Rent</span>
+                                        <img src="image/1695.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Gahanapokhari
+                                                </div>
+                                                <div class="property-name">New Commercial Land</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 5 ropani 3 Anna</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> Price On Call</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 2 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Rent</span>
+                                        <img src="image/clubhouse-tewksbury-usa.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Baneshwor
+                                                </div>
+                                                <div class="property-name">Modern Apartment</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 4-0-0-7</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> Price On Call</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 3 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Rent</span>
+                                        <img src="image/three-highend-luxury-townhouses-with-europeanstyle-architecture-stone-exterior-walls.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Bhaisepati
+                                                </div>
+                                                <div class="property-name">Land at Khoicha</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 0-9-2-4</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> NRS 90L / Anna</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 4 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Rent</span>
+                                        <img src="image/1695.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Gahanapokhari
+                                                </div>
+                                                <div class="property-name">Land Near Global College</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 0-22-1-0</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> NRS 1 Cr 20 Lakh / Anna</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- END Slide 1 -->
+
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="row g-3">
+                                <!------------- Card 5 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Rent</span>
+                                        <img src="image/front-white-house-with-blue-fence.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Gahanapokhari
+                                                </div>
+                                                <div class="property-name">Land near Bhaisipati Area</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 5 ropani 3 Anna</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> Price On Call</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 6 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Rent</span>
+                                        <img src="image/detailed-view-windows-doors-balconies-city-buildings.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Baneshwor
+                                                </div>
+                                                <div class="property-name">Modern Apartment</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 4-0-0-7</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> Price On Call</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 7 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Rent</span>
+                                        <img src="image/image 2.png" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Bhaisepati
+                                                </div>
+                                                <div class="property-name">Building in Khoicha</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 0-9-2-4</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> NRS 90L / Anna</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 8 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Rent</span>
+                                        <img src="image/modern-residential-district-with-blue-roof-balcony.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Gahanapokhari
+                                                </div>
+                                                <div class="property-name">Residential Area</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 0-22-1-0</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> NRS 1 Cr 20 Lakh / Anna</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- END Slide 2 -->
+
+                    </div>
+                    <!-- END carousel-inner -->
+
+                    <!-- Prev / Next Buttons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#rentCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#rentCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <!-- END carousel-wrapper -->
+
+        </section>
+
+        <!------------ New Listing Section ------------->
+        <section class="container py-5 d-flex flex-column gap-4">
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="section-title">New Listing</h2>
+                <a href="#" class="view-all align-bottom">View all 
+                    <img src="icons/side arrow.png" class="icon" alt="arrow">
+                </a>
+            </div>
+
+            <div class="carousel-wrapper">
+                <div id="listingCarousel" class="carousel slide property-carousel" data-bs-ride="false">
+                    <div class="carousel-inner">
+
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="row g-3">
+
+                                <!------------- Card 1 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Sale</span>
+                                        <img src="image/1695.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Gahanapokhari
+                                                </div>
+                                                <div class="property-name">New Commercial Land</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 5 ropani 3 Anna</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> Price On Call</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 2 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Sale</span>
+                                        <img src="image/clubhouse-tewksbury-usa.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Baneshwor
+                                                </div>
+                                                <div class="property-name">Modern Apartment</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 4-0-0-7</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> Price On Call</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 3 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Rent</span>
+                                        <img src="image/three-highend-luxury-townhouses-with-europeanstyle-architecture-stone-exterior-walls.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Bhaisepati
+                                                </div>
+                                                <div class="property-name">Land at Khoicha</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 0-9-2-4</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> NRS 90L / Anna</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 4 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Rent</span>
+                                        <img src="image/1695.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Gahanapokhari
+                                                </div>
+                                                <div class="property-name">Land Near Global College</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 0-22-1-0</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> NRS 1 Cr 20 Lakh / Anna</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- END Slide 1 -->
+
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="row g-3">
+                                <!------------- Card 5 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Sale</span>
+                                        <img src="image/front-white-house-with-blue-fence.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Gahanapokhari
+                                                </div>
+                                                <div class="property-name">Land near Bhaisipati Area</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 5 ropani 3 Anna</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> Price On Call</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 6 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">sale</span>
+                                        <img src="image/detailed-view-windows-doors-balconies-city-buildings.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Baneshwor
+                                                </div>
+                                                <div class="property-name">Modern Apartment</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 4-0-0-7</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> Price On Call</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 7 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Rent</span>
+                                        <img src="image/image 2.png" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Bhaisepati
+                                                </div>
+                                                <div class="property-name">Building in Khoicha</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 0-9-2-4</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> NRS 90L / Anna</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 8 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Rent</span>
+                                        <img src="image/modern-residential-district-with-blue-roof-balcony.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Gahanapokhari
+                                                </div>
+                                                <div class="property-name">Residential Area</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 0-22-1-0</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> NRS 1 Cr 20 Lakh / Anna</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- END Slide 2 -->
+
+                    </div>
+                    <!-- END carousel-inner -->
+
+                    <!-- Prev / Next Buttons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#listingCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#listingCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <!-- END carousel-wrapper -->
+
+        </section>
+
+        <!------------ Free Listing Section ------------->
+        <section class="container py-5 d-flex flex-column gap-4">
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="section-title">Free Listing</h2>
+                <a href="#" class="view-all align-bottom">View all 
+                    <img src="icons/side arrow.png" class="icon" alt="arrow">
+                </a>
+            </div>
+
+            <div class="carousel-wrapper">
+                <div id="freelistingCarousel" class="carousel slide property-carousel" data-bs-ride="false">
+                    <div class="carousel-inner">
+
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="row g-3">
+
+                                <!------------- Card 1 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Sale</span>
+                                        <img src="image/1695.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Gahanapokhari
+                                                </div>
+                                                <div class="property-name">New Commercial Land</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 5 ropani 3 Anna</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> Price On Call</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 2 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Sale</span>
+                                        <img src="image/clubhouse-tewksbury-usa.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Baneshwor
+                                                </div>
+                                                <div class="property-name">Modern Apartment</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 4-0-0-7</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> Price On Call</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 3 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Rent</span>
+                                        <img src="image/three-highend-luxury-townhouses-with-europeanstyle-architecture-stone-exterior-walls.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Bhaisepati
+                                                </div>
+                                                <div class="property-name">Land at Khoicha</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 0-9-2-4</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> NRS 90L / Anna</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 4 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Rent</span>
+                                        <img src="image/1695.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Gahanapokhari
+                                                </div>
+                                                <div class="property-name">Land Near Global College</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 0-22-1-0</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> NRS 1 Cr 20 Lakh / Anna</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- END Slide 1 -->
+
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="row g-3">
+                                <!------------- Card 5 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Sale</span>
+                                        <img src="image/front-white-house-with-blue-fence.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Gahanapokhari
+                                                </div>
+                                                <div class="property-name">Land near Bhaisipati Area</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 5 ropani 3 Anna</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> Price On Call</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 6 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">sale</span>
+                                        <img src="image/detailed-view-windows-doors-balconies-city-buildings.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Baneshwor
+                                                </div>
+                                                <div class="property-name">Modern Apartment</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 4-0-0-7</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> Price On Call</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 7 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Rent</span>
+                                        <img src="image/image 2.png" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Bhaisepati
+                                                </div>
+                                                <div class="property-name">Building in Khoicha</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 0-9-2-4</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> NRS 90L / Anna</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------- Card 8 -------------->
+                                <div class="col-3">
+                                    <div class="property-card position-relative p-0">
+                                        <span class="card-badge">Rent</span>
+                                        <img src="image/modern-residential-district-with-blue-roof-balcony.jpg" class="card-img" alt="Property">
+                                        <div class="card-body px-3 py-2">
+                                            <div class="gap-1 d-flex flex-column">
+                                                <div class="property-location">
+                                                    <img src="icons/ei_location.png" class="icon" alt="location icon"> Gahanapokhari
+                                                </div>
+                                                <div class="property-name">Residential Area</div>
+                                            </div>
+                                            <div class="property-area">
+                                                <span><img src="icons/size.png" class="icon" alt="area icon"> 0-22-1-0</span>
+                                                <div class="property-details py-1">
+                                                    <span><img src="icons/Frame 685.png" class="icon" alt="Bath">2 Bathroom</span>
+                                                    <span><img src="icons/material-symbols-light_single-bed-outline.png" class="icon" alt="bed">1 Bedroom</span>
+                                                    <span><img src="icons/kitchen.png" class="icon" alt="Fridge">1 Kitchen</span>
+                                                </div>
+                                            </div>
+                                            <div class="property-price"><img src="icons/ph_money-light.png" class="icon" alt="price icon"> NRS 1 Cr 20 Lakh / Anna</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- END Slide 2 -->
+
+                    </div>
+                    <!-- END carousel-inner -->
+
+                    <!-- Prev / Next Buttons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#freelistingCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#freelistingCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <!-- END carousel-wrapper -->
+
+        </section>
+
+        <!------------ Testimonials Section ------------->
+        <section class="container py-5 d-flex flex-column gap-4">
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="section-title">What Our Customer Say</h2>
+            </div>
+
+            <div class="carousel-wrapper">
+                <div class="carousel slide property-carousel" id="testimonialCarousel" data-bs-ride="false">
+                    <div class="carousel-inner">
+
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="row g-3">
+
+                                <!-- Testimonial Card 1 -->
+                                <div class="col-3">
+                                    <div class="testimonial-card">
+                                        <div class="testimonial-header">
+                                            <img src="image/businesswoman-posing_23-2148142829.avif" alt="Regina Tamang" class="testimonial-avatar">
+                                            <div>
+                                                <div class="testimonial-name">Regina Tamang</div>
+                                                <div class="testimonial-role">Land Owner</div>
+                                                <div class="testimonial-stars">★★★★★</div>
+                                            </div>
+                                        </div>
+                                        <p class="testimonial-text">Best Real estate agent in Nepal.</p>
+                                    </div>
+                                </div>
+    
+                                <!-- Testimonial Card 2 -->
+                                <div class="col-3">
+                                    <div class="testimonial-card">
+                                        <div class="testimonial-header">
+                                            <img src="image/young-professional-female-executive-wearing-red-jacket-while-sitting-outside-workplace_662251-2084.avif" alt="Susmita Rai" class="testimonial-avatar">
+                                            <div>
+                                                <div class="testimonial-name">Susmita Rai</div>
+                                                <div class="testimonial-role">Property Owner</div>
+                                                <div class="testimonial-stars">★★★★★</div>
+                                            </div>
+                                        </div>
+                                        <p class="testimonial-text">Highly professional and trustworthy service that made my property transaction smooth and easy.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial Card 3 -->
+                                <div class="col-3">
+                                    <div class="testimonial-card">
+                                        <div class="testimonial-header">
+                                            <img src="image/free-photo-of-portrait-of-an-elderly-man-in-a-suit-and-a-traditional-hat.jpeg" alt="Manoj Sherpa" class="testimonial-avatar">
+                                            <div>
+                                                <div class="testimonial-name">Manoj Sherpa</div>
+                                                <div class="testimonial-role">Land Owner</div>
+                                                <div class="testimonial-stars">★★★★★</div>
+                                            </div>
+                                        </div>
+                                        <p class="testimonial-text">Real estate services in Nepal have grown significantly in recent years, especially in major cities like other Kathmandu, Pokhara, and Chitwan where urban expansion and migratio...</p>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial Card 4 -->
+                                <div class="col-3">
+                                    <div class="testimonial-card">
+                                        <div class="testimonial-header">
+                                            <img src="image/indian-businessman-with-his-white-car_496169-2889.avif" alt="Rabin Thapa" class="testimonial-avatar">
+                                            <div>
+                                                <div class="testimonial-name">Rabin Thapa</div>
+                                                <div class="testimonial-role">Land Owner</div>
+                                                <div class="testimonial-stars">★★★★★</div>
+                                            </div>
+                                        </div>
+                                        <p class="testimonial-text">Real estate services in Nepal have grown significantly in recent years, especially in major cities like Kathmandu, Pokhara, and Chitwan, where urban expansion and migration have increased property demand. Ma...</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- END Slide 1 -->
+
+                    </div>
+
+                    <!-- Prev / Next Buttons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <!----------------- Stats Section -------------->
+        <section class="stats-section py-5">
+        <div class="container">
+            <div class="row g-4 justify-content-around">
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="stat-card d-flex align-items-center gap-4">
+                        <img src="icons/lsicon_house-outline.png" class="stat-icon" alt="properties">
+                        <div>
+                            <div class="stat-number">200</div>
+                            <div class="stat-label">Properties Deal</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="stat-card d-flex align-items-center gap-4">
+                        <img src="icons/formkit_people.png" class="stat-icon" alt="clients">
+                        <div>
+                            <div class="stat-number">500</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="stat-card d-flex align-items-center gap-4">
+                        <img src="icons/carbon_time.png" class="stat-icon" alt="experience">
+                        <div>
+                            <div class="stat-number">9+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </section>
+
+        <!------------------- Footer---------------------->
+        <footer>
+            <div class="container py-5">
+                <div class="row g-4">
+
+                <!-- CONTACT US -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <p class="footer-heading">Contact Us</p>
+                    <p class="footer-contact-text">
+                    If you have any question, please contact us at
+                    <a href="mailto:info@nepalbhoomi.com">info@nepalbhoomi.com</a>
+                    <a href="mailto:info.nepalbhoomi@gmail.com">info.nepalbhoomi@gmail.com</a>
+                    </p>
+                    <p class="footer-label-row"><b>Property Management:</b> <a href="tel:9818783518">9818783518</a></p>
+                    <p class="footer-label-row"><b>Buy/Sell:</b> <a href="tel:9802353660">9802353660</a></p>
+                    <p>
+                    <a href="tel:01-4537500">01-4537500</a> / <a href="tel:01-4537505">01-4537505</a>
+                    </p>
+                </div>
+
+                <!-- LOCATION -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <p class="footer-heading">Location</p>
+                    <p class="footer-location-address">Lazimpat, Kathmandu — Opposite Image Channel Building</p>
+                    <p class="footer-location-hours">Sun–Fri: 9:30 AM – 6:00 PM<br>Sat: CLOSED</p>
+                </div>
+
+                <!-- QUICK LINKS -->
+                <div class="col-lg-2 col-md-4 col-6">
+                    <p class="footer-heading">Quick Links</p>
+                    <ul class="footer-links">
+                    <li><a href="https://nepalbhoomi.com/privacy">Privacy</a></li>
+                    <li><a href="https://nepalbhoomi.com/services">Services</a></li>
+                    <li><a href="https://nepalbhoomi.com/job-vacancy">Job Vacancy</a></li>
+                    <li><a href="https://nepalbhoomi.com/contact-us">Get in Touch</a></li>
+                    </ul>
+                </div>
+
+                <!-- COMPANY -->
+                <div class="col-lg-2 col-md-4 col-6">
+                    <p class="footer-heading">Company</p>
+                    <ul class="footer-links">
+                    <li><a href="https://nepalbhoomi.com/page/about">About Us</a></li>
+                    <li><a href="https://nepalbhoomi.com/page/our-mission">Our Mission</a></li>
+                    <li><a href="https://nepalbhoomi.com/contact-us">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- POPULAR SEARCHES -->
+                <div class="col-lg-2 col-md-4 col-6">
+                    <p class="footer-heading">Popular Searches</p>
+                    <ul class="footer-links">
+                    <li><a href="https://nepalbhoomi.com/categories/apartment/sale">Apartments</a></li>
+                    <li><a href="https://nepalbhoomi.com/categories/business/sale">Business</a></li>
+                    <li><a href="https://nepalbhoomi.com/categories/flat/sale">Flat</a></li>
+                    <li><a href="https://nepalbhoomi.com/categories/house/sale">House/Bungalow</a></li>
+                    <li><a href="https://nepalbhoomi.com/categories/land/sale">Land</a></li>
+                    </ul>
+                </div>
+
+                </div>
+            </div>
+        </footer>
+
+        <!-- WhatsApp Floating Button 
+        <a href="https://wa.me/9818783518" class="whatsapp-float" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+                <a href="https://wa.me/9818783518" class="whatsapp-float" target="_blank">
+                    <span class="fa-brands fa-whatsapp"></span>
+                </a>
+        -->
+
+        <!-- Bootstrap JS --->
+         <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+    </body>
 </html>
