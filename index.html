@@ -62,7 +62,7 @@
         </div>
 
         <!-- Mobile Dropdown Menu -->
-        <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-backdrop" id="menuBackdrop">
             <ul>
                 <li><a href="#">About us</a></li>
                 <li><a href="#" style="text-decoration:underline;">Buy</a></li>
@@ -93,7 +93,7 @@
                     <div>
                         <h1>Your Trusted<br>Real Estate Partner</h1>
                         <p>Buy, sell, or rent with confidence and transparency.</p>
-                        <ul class="nav search-tabs mb-0 gap-2">
+                        <ul class="nav search-tabs mb-0 gap-2 p-0">
                             <li class="nav-item"><a class="nav-link active" href="#">Sell</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Rent</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Property by Area</a></li>
@@ -101,11 +101,13 @@
                         <div class="search-box gap-2">
                             <div class="dropdown align-center col-3">
                                 <button class="search-select dropdown-toggle gap-2" data-bs-toggle="dropdown">
-                                    <img src="icons/solar_home-2-linear.png" class="icon" alt="listing">
-                                    Property Type
+                                    <div class="d-flex gap-2">
+                                        <img src="icons/solar_home-2-linear.png" class="icon" alt="listing">
+                                        Property Type
+                                    </div class="d-flex gap-2">
                                     <img src="icons/weui_arrow-outlined.png" class="icon" alt="dropdown">
                                 </button>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu w-100">
                                     <li><a class="dropdown-item" href="#">House</a></li>
                                     <li><a class="dropdown-item" href="#">Flat</a></li>
                                     <li><a class="dropdown-item" href="#">Land</a></li>
@@ -113,11 +115,14 @@
                             </div>
                             <div class="dropdown">
                                 <button class="search-select dropdown-toggle gap-2" data-bs-toggle="dropdown">
-                                    <img src="icons/ph_money-light.png" class="icon" alt="listing">
-                                    Budgets
+
+                                    <div>
+                                        <img src="icons/ph_money-light.png" class="icon" alt="listing">
+                                        Budgets
+                                    </div>
                                     <img src="icons/weui_arrow-outlined.png" class="icon" alt="dropdown">
                                 </button>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu w-100">
                                     <li><a class="dropdown-item" href="#">Under 1 Lakh</a></li>
                                     <li><a class="dropdown-item" href="#">Under 50 Lakh</a></li>
                                     <li><a class="dropdown-item" href="#">Under 1 Cr</a></li>

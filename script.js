@@ -1,27 +1,28 @@
 // ── Hamburger Menu ──
-document.addEventListener("DOMContentLoaded", function () {
-
+document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.getElementById("hamburger");
     const mobileMenu = document.getElementById("mobileMenu");
+    const backdrop = document.getElementById("menuBackdrop");
 
     if (!hamburger || !mobileMenu) return;
 
-    hamburger.addEventListener("click", function () {
+    const toggle = (force) => {
+        const open = force ?? !mobileMenu.classList.contains("open");
+        [hamburger, mobileMenu, backdrop].forEach(el => el?.classList.toggle("open", open));
+        document.body.style.overflow = open ? "hidden" : "";
+    };
 
-        hamburger.classList.toggle("open");
-        mobileMenu.classList.toggle("open");
-
-    });
-
+    hamburger.addEventListener("click", () => toggle());
+    backdrop.addEventListener("click", () => toggle(false));
+    mobileMenu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => toggle(false)));
 });
 
 // ── Reusable Swiper Init ──
 function initSwiper(id, slides = 4) {
-
     if (typeof Swiper === "undefined") return;
 
-    const element = document.querySelector(id);
-    if (!element) return;
+    const el = document.querySelector(id);
+    if (!el) return;
 
     new Swiper(id, {
         slidesPerView: slides,
@@ -36,8 +37,8 @@ function initSwiper(id, slides = 4) {
         },
 
         navigation: {
-            prevEl: id + ' .swiper-button-prev',
-            nextEl: id + ' .swiper-button-next',
+            prevEl: el.querySelector('.swiper-button-prev'), // ✅ Fixed
+            nextEl: el.querySelector('.swiper-button-next'), // ✅ Fixed
         },
 
         breakpoints: {
@@ -48,7 +49,6 @@ function initSwiper(id, slides = 4) {
         }
     });
 }
-
 
 // ── Initialize Swipers ──
 initSwiper('#saleSwiper');
