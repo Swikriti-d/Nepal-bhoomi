@@ -114,15 +114,20 @@ transition: transform 0.3s ease, opacity 0.2s ease;
 position: fixed;
 top: 0;
 right: -100%; /* hidden off screen to the right */
-width: 75%;
+width: 60%;
 max-width: 320px;
 height: 100vh;
 background: var(--white);
 z-index: 1000;
 overflow-y: auto;
-padding: 90px 24px 40px;
+padding: 80px 25px 50px;
 box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
 transition: right 0.35s ease;
+}
+
+body.menu-open {
+  overflow: hidden;      /* Prevent scrolling */
+  height: 100vh;         /* Fix viewport height on mobile */
 }
 
 .mobile-menu.open {
@@ -134,7 +139,7 @@ right: 0; /* slides in */
 display: none;
 position: fixed;
 inset: 0;
-background: rgba(0, 0, 0, 0.4);
+background: rgba(0, 0, 0, 0.2);
 z-index: 999;
 }
 

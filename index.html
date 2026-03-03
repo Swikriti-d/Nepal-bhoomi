@@ -61,28 +61,30 @@
 
         </div>
 
-        <!-- Mobile Dropdown Menu -->
-        <div class="mobile-menu" id="mobileMenu">
-            <ul>
-                <li><a href="#">About us</a></li>
-                <li><a href="#" style="text-decoration:underline;">Buy</a></li>
-                <li><a href="#" style="text-decoration:underline;">Rent</a></li>
-                <li><a href="#">Blogs</a></li>
-                <li><a href="#">EMI Calculator</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li>
-                    <a href="#" class="mobile-btn">
-                        <img src="icons/famicons_person.png" class="icon" alt="user">
-                        Sign In / Sign Up
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="mobile-btn mobile-btn">
-                        <img src="icons/stash_pencil-writing-light.png" class="icon" alt="listing">
-                        Free Listing
-                    </a>
-                </li>
-            </ul>
+        <div class="mobile-menu-backdrop" id="backdrop">
+            <!-- Mobile Dropdown Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#" style="text-decoration:underline;">Buy</a></li>
+                    <li><a href="#" style="text-decoration:underline;">Rent</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">EMI Calculator</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li>
+                        <a href="#" class="mobile-btn">
+                            <img src="icons/famicons_person.png" class="icon" alt="user">
+                            Sign In / Sign Up
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="mobile-btn">
+                            <img src="icons/stash_pencil-writing-light.png" class="icon" alt="listing">
+                            Free Listing
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     <!------------------- HERO ------------------------>
@@ -101,10 +103,10 @@
                         <div class="search-box gap-2">
                             <div class="dropdown align-center col-3">
                                 <button class="search-select dropdown-toggle gap-2" data-bs-toggle="dropdown">
-                                    <div class="d-flex gap-2">
+                                    <div class="d-flex gap-1 align-items-center">
                                         <img src="icons/solar_home-2-linear.png" class="icon" alt="listing">
                                         Property Type
-                                    </div class="d-flex gap-2">
+                                    </div>
                                     <img src="icons/weui_arrow-outlined.png" class="icon" alt="dropdown">
                                 </button>
                                 <ul class="dropdown-menu w-100">
@@ -116,7 +118,7 @@
                             <div class="dropdown">
                                 <button class="search-select dropdown-toggle gap-2" data-bs-toggle="dropdown">
 
-                                    <div>
+                                    <div class="d-flex gap-1 align-items-center">
                                         <img src="icons/ph_money-light.png" class="icon" alt="listing">
                                         Budgets
                                     </div>
