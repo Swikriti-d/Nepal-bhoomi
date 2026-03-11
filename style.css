@@ -6,19 +6,20 @@ font-family: 'Lato', sans-serif;
 }
 
 :root {
+--btn: #585858f6;
 --yellow: #CC9900;
 --dark: #000000;
 --white: #FFFFFF;
---muted: #2f2f2f;
+--text-muted: #717171;
 --gold: linear-gradient(to right, #f5c918, #e8ddb5, #f5c918);
---border: #DFDFDF;
+--border: #dbdbdb;
 }
 
 body {
 font-size: 14px;
 font-weight: 500;
 background: var(--white);
-color: var(--muted);
+color: var(--text-muted);
 }
 
 h2 {
@@ -70,17 +71,17 @@ text-decoration: none;
 }
 
 .nav-btn {
-    background: none;
-    border: none !important;
-    border-bottom: 2px solid transparent !important; /* keeps space */
-    border-image: var(--gold) 1 !important;
-    border-radius: 0 !important;
-    padding: 4px 4px;
-    transition: color 0.2s;
-    white-space: nowrap;
-    display: flex !important;
-    align-items: center;
-    gap: 6px;
+background: none;
+border: none !important;
+border-bottom: 2px solid transparent !important; /* keeps space */
+border-image: var(--gold) 1 !important;
+border-radius: 0 !important;
+padding: 4px 4px;
+transition: color 0.2s;
+white-space: nowrap;
+display: flex !important;
+align-items: center;
+gap: 6px;
 }
 
 /* ── Mobile Menu Drawer ── */
@@ -126,8 +127,8 @@ transition: right 0.35s ease;
 }
 
 body.menu-open {
-  overflow: hidden;      /* Prevent scrolling */
-  height: 100vh;         /* Fix viewport height on mobile */
+overflow: hidden; /* Prevent scrolling */
+height: 100vh; /* Fix viewport height on mobile */
 }
 
 .mobile-menu.open {
@@ -160,7 +161,7 @@ display: block;
 padding: 13px 0;
 font-size: 15px;
 font-weight: 400;
-color: var(--muted);
+color: var(--text-muted) !important;
 text-decoration: none;
 border-bottom: 1px solid #f0f0f0;
 transition: color 0.2s, padding-left 0.2s;
@@ -361,7 +362,7 @@ color: var(--dark);
 
 .property-area {
 font-size: 14px;
-color: var(--muted);
+color: var(--text-muted);
 }
 
 .property-details {
@@ -445,7 +446,7 @@ object-fit: cover;
 }
 
 .testimonial-name { font-weight: 700; font-size: 15px; }
-.testimonial-role { font-size: 13px; color: var(--muted); }
+.testimonial-role { font-size: 13px; color: var(--text-muted); }
 .testimonial-stars { color: var(--yellow); font-size: 14px; }
 
 .testimonial-text {
@@ -482,7 +483,7 @@ color: var(--dark);
 
 footer p, footer a {
 font-size: 14px;
-color: var(--muted);
+color: var(--text-muted);
 margin-bottom: 6px;
 }
 
@@ -598,5 +599,343 @@ line-height: 1.2;
 .stat-label {
 font-size: 16px;
 }
+}
 
+/*-------------------Detail Page-------------------*/
+.gallery-thumbs .swiper-slide {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+    opacity: 1;
+    border: 2px solid var(--yellow);
+    border-radius: 8px;
+}
+
+.main-img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.thumb-img {
+    filter: brightness(0.7);
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+  
+}
+
+.thumb-img.active,
+.thumb-img:hover {
+    border-color: var(--yellow);
+    transform: scale(1.03);
+}
+
+
+/* ------------ PROPERTY INFO ------------ */
+.detail-location {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--text-muted);
+}
+
+.property-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.property-price-detail {
+    font-size: 22px;
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.negotiable-badge { font-size: 14px !important; }
+
+
+/* ------------ SECTION TOGGLES ( Reuseable ) ------------ */
+.detail-section { padding: 0; }
+
+.section-toggle {
+    cursor: pointer;
+    user-select: none;
+    padding: 16px 0;
+}
+
+.section-toggle h5 {
+    font-size: 22px;
+    color: var(--dark);
+    margin: 0;
+}
+
+.toggle-icon {
+    font-size: 14px;
+    color: var(--text-muted);
+    transition: transform 0.3s ease;
+}
+
+.toggle-icon.rotated { transform: rotate(180deg); }
+
+.section-divider {
+    border: none;
+    border-top: 2px solid #cacaca;
+    margin: 0;
+}
+
+.section-body { padding: 16px 0; }
+
+
+/* ------------LABELS & VALUES------------ */
+.label-block {
+    display: block;
+    font-size: 16px;
+    color: var(--dark);
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.value-text { font-size: 16px; color: var(--text-muted); }
+.value-bold { font-size: 16px; font-weight: 700; color: var(--dark); }
+
+
+/* ------------ OVERVIEW GRID------------ */
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+
+/* ------------ AMENITIES GRID ------------ */
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.amenity-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.amenity-item i {
+    font-size: 14px;
+    width: 18px;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+
+/* ------------ DESCRIPTION ------------ */
+.description-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+
+/* ------------FLOOR DETAILS ------------ */
+
+.floor-details-row {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.floor-plan-box {
+    width: 220px;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.floor-plan-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.floor-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+/* ------------CONTACT CARD ------------ */
+.contact-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    position: sticky;
+    top: 16px;
+    background: var(--white);
+}
+
+.contact-card h6 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--dark);
+}
+
+.agent-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 16px;
+    background: #fafafa;
+}
+
+.agent-name  { font-size: 14px; font-weight: 600; color: var(--dark); }
+.agent-phone { font-size: 14px; color: var(--text-muted); }
+
+.contact-card label {
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+    color: var(--dark);
+}
+
+.contact-card input,
+.contact-card textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 14px;
+    outline: none;
+    margin-bottom: 12px;
+    transition: border-color 0.2s;
+    background: var(--white);
+}
+
+.contact-card input:focus,
+.contact-card textarea:focus { border-color: var(--yellow); }
+
+.contact-card textarea { height: 72px; resize: none; }
+
+.btn-submit {
+    width: 100%;
+    background: var(--dark);
+    color: var(--white);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-submit:hover { background: var(--btn); }
+
+/* ------------RESPONSIVE — Detail Page------------ */
+
+@media (max-width: 992px) {
+
+    /* Gallery */
+    .main-img { height: 340px; }
+    .thumb-img { height: 90px; }
+
+    /* Overview & Amenities */
+    .overview-grid,
+    .amenities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Floor Deatils*/
+    .floor-details-row {
+        flex-direction: column;
+    }
+
+    .floor-plan-box {
+        width: 80%;
+        height: 40%;
+    }
+
+    .floor-stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+    }
+
+    /* Contact card stops being sticky */
+    .contact-card {
+        position: static;
+        margin: 10px;
+    }
+}
+
+/* ------------ MOBILE ------------ */
+@media (max-width: 768px) {
+
+    /* Gallery */
+    .main-img { height: 260px; }
+    .thumb-img { height: 72px; }
+
+    /* Property Details */
+    .property-title { font-size: 20px; }
+    .property-price-detail { font-size: 18px; }
+    .detail-location { font-size: 14px; }
+
+    /* Section headings */
+    .section-toggle h5 { font-size: 18px; }
+
+    /* Overview & Amenities */
+    .overview-grid,
+    .amenities-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .floor-stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        gap: 12px;
+    }
+
+    /* Contact card */
+    .contact-card {
+        position: static;
+        padding: 16px;
+    }
+}
+
+/* ------------ SMALL MOBILE (≤ 480px) ------------ */
+@media (max-width: 480px) {
+
+    .main-img { height: 210px; }
+    .thumb-img { height: 58px; }
+
+    .overview-grid { grid-template-columns: repeat(2, 1fr); }
+    .amenities-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .floor-stats-grid { grid-template-columns: repeat(3, 1fr); }
+
+    .property-title { font-size: 17px; }
+
+    .property-price-detail {
+        flex-wrap: wrap;
+        font-size: 16px;
+    }
 }
