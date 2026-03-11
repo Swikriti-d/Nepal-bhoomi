@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Section</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--------- Swiper carousel --------->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!--------- Google Fonts --------->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <!--------- Font Awesome icons --------->
+
+</head>
+
+<body>
+
+    <!--- Navigation Bar --->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <!--------- Left logo --------->
+            <div class="nav-logo-left">
+                <img src="image/main_logo.png" alt="Logo" class="logo">
+            </div>
+
+            <!--------- Desktop navigation links (hidden on mobile) --------->
+            <div class="desktop-nav">
+                <ul class="navbar-nav flex-row gap-4 align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="text-decoration:underline;">Buy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="text-decoration:underline;">Rent</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">EMI Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact us</a>
+                    </li>
+
+                    <!--------- Sign In / Sign Up button --------->
+                    <li class="nav-item">
+                        <a href="#" class="btn nav-btn">
+                            <img src="icons/famicons_person.png" class="icon" alt="user">
+                            Sign In / Sign Up
+                        </a>
+                    </li>
+
+                    <!--------- Free Listing button --------->
+                    <li class="nav-item">
+                        <a href="#" class="btn nav-btn">
+                            <img src="icons/stash_pencil-writing-light.png" class="icon" alt="listing">
+                            Free Listing
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--------- Right logo --------->
+            <div class="nav-logo-right">
+                <img src="image/negi_logo.png" alt="Logo" class="logo">
+            </div>
+
+            <!--------- Hamburger button (visible on mobile only) --------->
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!--------- Mobile menu (slides in when hamburger is clicked) --------->
+        <div class="mobile-menu-backdrop" id="backdrop">
+            <div class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#" style="text-decoration:underline;">Buy</a></li>
+                    <li><a href="#" style="text-decoration:underline;">Rent</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">EMI Calculator</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#" class="mobile-btn"><img src="icons/famicons_person.png" class="icon" alt="user">Sign
+                            In / Sign Up</a></li>
+                    <li><a href="#" class="mobile-btn"><img src="icons/stash_pencil-writing-light.png" class="icon"
+                                alt="listing">Free Listing</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!---------  PROPERTY DETAIL SECTION  --------->
+    <section class="container py-4">
+        <div class="row g-4">
+            <!--------- LEFT COLUMN--------->
+            <div class="col-lg-8 d-flex flex-column gap-3">
+                <!--------- Gallery--------->
+                <div>
+                    <!--------- Main image carousel--------->
+                    <div class="swiper gallery-main">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="image/1.png" alt="Property" class="main-img"></div>
+                            <div class="swiper-slide"><img src="image/2.png" alt="Property" class="main-img"></div>
+                            <div class="swiper-slide"><img src="image/3.png" alt="Property" class="main-img"></div>
+                            <div class="swiper-slide"><img src="image/4.png" alt="Property" class="main-img"></div>
+                            <div class="swiper-slide"><img src="image/5.png" alt="Property" class="main-img"></div>
+                        </div>
+                    </div>
+
+                    <!--------- Thumbnail carousel (synced with main carousel) --------->
+                    <div class="swiper gallery-thumbs mt-2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="image/1.png" alt="" class="thumb-img"></div>
+                            <div class="swiper-slide"><img src="image/2.png" alt="" class="thumb-img"></div>
+                            <div class="swiper-slide"><img src="image/3.png" alt="" class="thumb-img"></div>
+                            <div class="swiper-slide"><img src="image/4.png" alt="" class="thumb-img"></div>
+                            <div class="swiper-slide"><img src="image/5.png" alt="" class="thumb-img"></div>
+                        </div>
+                    </div>
+
+                    <!--------- Property location, post date, title, and price --------->
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div class="detail-location">
+                            <img src="icons/ei_location.png" class="icon" alt="location">
+                            Gahanapokhari
+                        </div>
+                        <small class="text-muted">Posted: 1 month ago</small>
+                    </div>
+                    <p class="property-title mt-1 mb-1">Brand New Commercial Building "FOR RENT/ LEASE".</p>
+                    <p class="property-price-detail mb-0 d-flex align-items-center gap-3">
+                        Price: NRS 1 Lakh / month
+                        <span class="badge bg-dark text-white negotiable-badge">Negotiable</span>
+                    </p>
+                </div>
+
+                <!--------- Detail sections --------->
+                <div class="d-flex flex-column">
+
+                    <!--------- Overview section--------->
+                    <div class="detail-section">
+                        <div class="section-toggle d-flex justify-content-between align-items-center"
+                            onclick="toggleSection(this)">
+                            <h5>Overview</h5>
+                            <i class="fa-solid fa-chevron-up toggle-icon"></i>
+                        </div>
+                        <div class="section-body">
+                            <div class="overview-grid">
+                                <div>
+                                    <label class="label-block">Property Id</label>
+                                    <span class="value-text">NBL171</span>
+                                </div>
+                                <div>
+                                    <label class="label-block">Property Face</label>
+                                    <span class="value-text">West</span>
+                                </div>
+                                <div>
+                                    <label class="label-block">Build Year</label>
+                                    <span class="value-text">2024</span>
+                                </div>
+                                <div>
+                                    <label class="label-block">Area Covered</label>
+                                    <span class="value-text">0-5-0-0</span>
+                                </div>
+                                <div>
+                                    <label class="label-block">Road Access</label>
+                                    <span class="value-text">26 ft</span>
+                                </div>
+                                <div>
+                                    <label class="label-block">Road Condition</label>
+                                    <span class="value-text">Black Top</span>
+                                </div>
+                                <div>
+                                    <label class="label-block">Build Up Area</label>
+                                    <span class="value-text">0-5-0-0</span>
+                                </div>
+                                <div>
+                                    <label class="label-block">Views</label>
+                                    <span class="value-text">142</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="section-divider">
+
+                    <!--------- Features & Amenities section--------->
+                    <div class="detail-section">
+                        <div class="section-toggle d-flex justify-content-between align-items-center"
+                            onclick="toggleSection(this)">
+                            <h5>Features &amp; Amenities</h5>
+                            <i class="fa-solid fa-chevron-up toggle-icon"></i>
+                        </div>
+                        <div class="section-body">
+                            <div class="amenities-grid">
+                                <div class="amenity-item">
+                                    <i class="fa-solid fa-couch"></i>
+                                    Balcony
+                                </div>
+                                <div class="amenity-item">
+                                    <i class="fa-solid fa-sun"></i>
+                                    Solar Water
+                                </div>
+                                <div class="amenity-item">
+                                    <i class="fa-solid fa-snowflake"></i>
+                                    Air Condition
+                                </div>
+                                <div class="amenity-item">
+                                    <i class="fa-solid fa-dumbbell"></i>
+                                    Fitness Center
+                                </div>
+                                <div class="amenity-item">
+                                    <i class="fa-solid fa-droplet"></i>
+                                    Water Storage
+                                </div>
+                                <div class="amenity-item">
+                                    <i class="fa-solid fa-square-parking"></i>
+                                    Parking
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="section-divider">
+
+                    <!--------- Description section --------->
+                    <div class="detail-section">
+                        <div class="section-toggle d-flex justify-content-between align-items-center"
+                            onclick="toggleSection(this)">
+                            <h5>Description</h5>
+                            <i class="fa-solid fa-chevron-up toggle-icon"></i>
+                        </div>
+                        <div class="section-body">
+                            <p class="description-text">
+                                A well-maintained and spacious house is available for rent in a prime and peaceful
+                                residential area of Kathmandu. The property is ideal for small families, working
+                                professionals, or students looking for a comfortable and secure living space. The house
+                                is located near schools, colleges, hospitals, grocery shops, and public transportation,
+                                making daily life convenient and comfortable.
+                            </p>
+                            <p class="description-text mb-0">
+                                Serious tenants only. For more details or to schedule a visit, please call the contact
+                                number provided.
+                            </p>
+                        </div>
+                    </div>
+
+                    <hr class="section-divider">
+
+                    <!--------- Floor Details section--------->
+                    <div class="detail-section">
+                        <div class="section-toggle d-flex justify-content-between align-items-center"
+                            onclick="toggleSection(this)">
+                            <h5>Floor Details</h5>
+                            <i class="fa-solid fa-chevron-up toggle-icon"></i>
+                        </div>
+                        <div class="section-body">
+                            <div class="floor-details-row">
+
+                                <!--------- Floor plan image --------->
+                                <div class="floor-plan-box">
+                                    <img src="image/floor.png" alt="Floor Plan">
+                                </div>
+
+                                <!--------- Floor stats grid --------->
+                                <div class="floor-stats-grid">
+                                        <div>
+                                            <label class="label-block">Floor</label>
+                                            <span class="value-text">2.5</span>
+                                        </div>
+                                        <div>
+                                            <label class="label-block">Bedroom</label>
+                                            <span class="value-text">2</span>
+                                        </div>
+                                        <div>
+                                            <label class="label-block">Bathroom</label>
+                                            <span class="value-text">4</span>
+                                        </div>
+                                        <div>
+                                            <label class="label-block">Kitchen</label>
+                                            <span class="value-text">2</span>
+                                        </div>
+                                        <div>
+                                            <label class="label-block">Living</label>
+                                            <span class="value-text">2</span>
+                                        </div>
+                                        <div>
+                                            <label class="label-block">Balcony</label>
+                                            <span class="value-text">2</span>
+                                        </div>
+                                        <div class="full-width">
+                                            <label class="label-block">Area Coverage</label>
+                                            <span class="value-text">3 Aana 2 Paisa</span>
+                                        </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--------- RIGHT COLUMN: Contact / Inquiry Card --------->
+            <div class="col-lg-4">
+                <div class="contact-card">
+                    <h6>Contact us</h6>
+
+                    <!--------- Agent info: logo, name, phone --------->
+                    <div class="agent-box">
+                        <img src="image/main_logo.png" alt="Logo" class="logo">
+                        <div>
+                            <div class="agent-name">Anil Sharma</div>
+                            <div class="agent-phone">+977 9800000000</div>
+                        </div>
+                    </div>
+
+                    <!--------- Inquiry form fields --------->
+                    <label>Name</label>
+                    <input type="text" placeholder="John Rai">
+
+                    <label>Email</label>
+                    <input type="email" placeholder="xyz@gmail.com">
+
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="+977 9800000000">
+
+                    <label>Comment</label>
+                    <textarea placeholder="Comment here..."></textarea>
+
+                    <!--------- Form submit button --------->
+                    <button class="btn-submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---------  RELATED PROPERTIES --------->
+    <section class="container py-5 d-flex flex-column gap-4">
+
+        <!--------- Section header with "View all" link --------->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="section-title">Related Properties</h2>
+            <a href="#" class="view-all">View all
+                <img src="icons/side arrow.png" class="icon" alt="arrow"></a>
+        </div>
+
+        <!--------- Swiper carousel for related property cards --------->
+        <div class="carousel-wrapper">
+            <div class="swiper property-swiper" id="relatedSwiper">
+                <div class="swiper-wrapper">
+
+                    <!--------- Property Card 1 --------->
+                    <div class="swiper-slide">
+                        <div class="property-card position-relative p-0">
+                            <span class="card-badge">Sale</span>
+                            <img src="image/1695.jpg" class="card-img" alt="Property">
+                            <div class="card-body px-3 py-2">
+                                <div class="gap-1 d-flex flex-column">
+                                    <div class="property-location"><img src="icons/ei_location.png" class="icon"
+                                            alt="location">
+                                        Gahanapokhari</div>
+                                    <div class="property-name">New Commercial Land</div>
+                                </div>
+                                <div class="property-area">
+                                    <span><img src="icons/size.png" class="icon" alt="area">
+                                        5 ropani 3 Anna</span>
+                                    <div class="property-details py-1">
+                                        <span><img src="icons/Frame 685.png" class="icon" alt="bath">2 Bathroom</span>
+                                        <span><img src="icons/material-symbols-light_single-bed-outline.png"
+                                                class="icon" alt="bed">1 Bedroom</span>
+                                        <span><img src="icons/kitchen.png" class="icon" alt="kitchen">1 Kitchen</span>
+                                    </div>
+                                </div>
+                                <div class="property-price"><img src="icons/ph_money-light.png" class="icon"
+                                        alt="price">
+                                    Price On Call</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--------- Property Card 2 --------->
+                    <div class="swiper-slide">
+                        <div class="property-card position-relative p-0">
+                            <span class="card-badge">Sale</span>
+                            <img src="image/clubhouse-tewksbury-usa.jpg" class="card-img" alt="Property">
+                            <div class="card-body px-3 py-2">
+                                <div class="gap-1 d-flex flex-column">
+                                    <div class="property-location"><img src="icons/ei_location.png" class="icon"
+                                            alt="location">
+                                        Baneshwor</div>
+                                    <div class="property-name">Modern Apartment</div>
+                                </div>
+                                <div class="property-area">
+                                    <span><img src="icons/size.png" class="icon" alt="area">
+                                        4-0-0-7</span>
+                                    <div class="property-details py-1">
+                                        <span><img src="icons/Frame 685.png" class="icon" alt="bath">2 Bathroom</span>
+                                        <span><img src="icons/material-symbols-light_single-bed-outline.png"
+                                                class="icon" alt="bed">1 Bedroom</span>
+                                        <span><img src="icons/kitchen.png" class="icon" alt="kitchen">1 Kitchen</span>
+                                    </div>
+                                </div>
+                                <div class="property-price"><img src="icons/ph_money-light.png" class="icon"
+                                        alt="price">
+                                    Price On Call</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--------- Property Card 3 --------->
+                    <div class="swiper-slide">
+                        <div class="property-card position-relative p-0">
+                            <span class="card-badge">Rent</span>
+                            <img src="image/three-highend-luxury-townhouses-with-europeanstyle-architecture-stone-exterior-walls.jpg"
+                                class="card-img" alt="Property">
+                            <div class="card-body px-3 py-2">
+                                <div class="gap-1 d-flex flex-column">
+                                    <div class="property-location"><img src="icons/ei_location.png" class="icon"
+                                            alt="location">
+                                        Bhaisepati</div>
+                                    <div class="property-name">Land at Khoicha</div>
+                                </div>
+                                <div class="property-area">
+                                    <span><img src="icons/size.png" class="icon" alt="area">
+                                        0-9-2-4</span>
+                                    <div class="property-details py-1">
+                                        <span><img src="icons/Frame 685.png" class="icon" alt="bath">2 Bathroom</span>
+                                        <span><img src="icons/material-symbols-light_single-bed-outline.png"
+                                                class="icon" alt="bed">1 Bedroom</span>
+                                        <span><img src="icons/kitchen.png" class="icon" alt="kitchen">1 Kitchen</span>
+                                    </div>
+                                </div>
+                                <div class="property-price"><img src="icons/ph_money-light.png" class="icon"
+                                        alt="price">
+                                    NRS 90L / Anna</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--------- Property Card 4 --------->
+                    <div class="swiper-slide">
+                        <div class="property-card position-relative p-0">
+                            <span class="card-badge">Rent</span>
+                            <img src="image/1695.jpg" class="card-img" alt="Property">
+                            <div class="card-body px-3 py-2">
+                                <div class="gap-1 d-flex flex-column">
+                                    <div class="property-location"><img src="icons/ei_location.png" class="icon"
+                                            alt="location">
+                                        Gahanapokhari</div>
+                                    <div class="property-name">Land Near Global College</div>
+                                </div>
+                                <div class="property-area">
+                                    <span><img src="icons/size.png" class="icon" alt="area">
+                                        0-22-1-0</span>
+                                    <div class="property-details py-1">
+                                        <span><img src="icons/Frame 685.png" class="icon" alt="bath">2 Bathroom</span>
+                                        <span><img src="icons/material-symbols-light_single-bed-outline.png"
+                                                class="icon" alt="bed">1 Bedroom</span>
+                                        <span><img src="icons/kitchen.png" class="icon" alt="kitchen">1 Kitchen</span>
+                                    </div>
+                                </div>
+                                <div class="property-price"><img src="icons/ph_money-light.png" class="icon"
+                                        alt="price">
+                                    NRS 1 Cr 20 Lakh / Anna</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--------- Property Card 5 --------->
+                    <div class="swiper-slide">
+                        <div class="property-card position-relative p-0">
+                            <span class="card-badge">Sale</span>
+                            <img src="image/front-white-house-with-blue-fence.jpg" class="card-img" alt="Property">
+                            <div class="card-body px-3 py-2">
+                                <div class="gap-1 d-flex flex-column">
+                                    <div class="property-location"><img src="icons/ei_location.png" class="icon"
+                                            alt="location">
+                                        Gahanapokhari</div>
+                                    <div class="property-name">Land near Bhaisipati Area</div>
+                                </div>
+                                <div class="property-area">
+                                    <span><img src="icons/size.png" class="icon" alt="area">
+                                        5 ropani 3 Anna</span>
+                                    <div class="property-details py-1">
+                                        <span><img src="icons/Frame 685.png" class="icon" alt="bath">2 Bathroom</span>
+                                        <span><img src="icons/material-symbols-light_single-bed-outline.png"
+                                                class="icon" alt="bed">1 Bedroom</span>
+                                        <span><img src="icons/kitchen.png" class="icon" alt="kitchen">1 Kitchen</span>
+                                    </div>
+                                </div>
+                                <div class="property-price"><img src="icons/ph_money-light.png" class="icon"
+                                        alt="price">
+                                    Price On Call</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--------- Property Card 6 --------->
+                    <div class="swiper-slide">
+                        <div class="property-card position-relative p-0">
+                            <span class="card-badge">Sale</span>
+                            <img src="image/detailed-view-windows-doors-balconies-city-buildings.jpg" class="card-img"
+                                alt="Property">
+                            <div class="card-body px-3 py-2">
+                                <div class="gap-1 d-flex flex-column">
+                                    <div class="property-location"><img src="icons/ei_location.png" class="icon"
+                                            alt="location">
+                                        Baneshwor</div>
+                                    <div class="property-name">Modern Apartment</div>
+                                </div>
+                                <div class="property-area">
+                                    <span><img src="icons/size.png" class="icon" alt="area">
+                                        4-0-0-7</span>
+                                    <div class="property-details py-1">
+                                        <span><img src="icons/Frame 685.png" class="icon" alt="bath">2 Bathroom</span>
+                                        <span><img src="icons/material-symbols-light_single-bed-outline.png"
+                                                class="icon" alt="bed">1 Bedroom</span>
+                                        <span><img src="icons/kitchen.png" class="icon" alt="kitchen">1 Kitchen</span>
+                                    </div>
+                                </div>
+                                <div class="property-price"><img src="icons/ph_money-light.png" class="icon"
+                                        alt="price">
+                                    Price On Call</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--------- Property Card 7 --------->
+                    <div class="swiper-slide">
+                        <div class="property-card position-relative p-0">
+                            <span class="card-badge">Rent</span>
+                            <img src="image/image 2.png" class="card-img" alt="Property">
+                            <div class="card-body px-3 py-2">
+                                <div class="gap-1 d-flex flex-column">
+                                    <div class="property-location"><img src="icons/ei_location.png" class="icon"
+                                            alt="location">
+                                        Bhaisepati</div>
+                                    <div class="property-name">Building in Khoicha</div>
+                                </div>
+                                <div class="property-area">
+                                    <span><img src="icons/size.png" class="icon" alt="area">
+                                        0-9-2-4</span>
+                                    <div class="property-details py-1">
+                                        <span><img src="icons/Frame 685.png" class="icon" alt="bath">2 Bathroom</span>
+                                        <span><img src="icons/material-symbols-light_single-bed-outline.png"
+                                                class="icon" alt="bed">1 Bedroom</span>
+                                        <span><img src="icons/kitchen.png" class="icon" alt="kitchen">1 Kitchen</span>
+                                    </div>
+                                </div>
+                                <div class="property-price"><img src="icons/ph_money-light.png" class="icon"
+                                        alt="price">
+                                    NRS 90L / Anna</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--------- Property Card 8 --------->
+                    <div class="swiper-slide">
+                        <div class="property-card position-relative p-0">
+                            <span class="card-badge">Rent</span>
+                            <img src="image/modern-residential-district-with-blue-roof-balcony.jpg" class="card-img"
+                                alt="Property">
+                            <div class="card-body px-3 py-2">
+                                <div class="gap-1 d-flex flex-column">
+                                    <div class="property-location"><img src="icons/ei_location.png" class="icon"
+                                            alt="location">
+                                        Gahanapokhari</div>
+                                    <div class="property-name">Residential Area</div>
+                                </div>
+                                <div class="property-area">
+                                    <span><img src="icons/size.png" class="icon" alt="area">
+                                        0-22-1-0</span>
+                                    <div class="property-details py-1">
+                                        <span><img src="icons/Frame 685.png" class="icon" alt="bath">2 Bathroom</span>
+                                        <span><img src="icons/material-symbols-light_single-bed-outline.png"
+                                                class="icon" alt="bed">1 Bedroom</span>
+                                        <span><img src="icons/kitchen.png" class="icon" alt="kitchen">1 Kitchen</span>
+                                    </div>
+                                </div>
+                                <div class="property-price"><img src="icons/ph_money-light.png" class="icon"
+                                        alt="price">
+                                    NRS 1 Cr 20 Lakh / Anna</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--------- Swiper prev/next navigation arrows --------->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <!---------  FOOTER  --------->
+    <footer>
+        <div class="container py-5">
+            <div class="row g-4">
+
+                <!--------- Contact info column --------->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <p class="footer-heading">Contact Us</p>
+                    <p class="footer-contact-text">
+                        If you have any question, please contact us at
+                        <a href="mailto:info@nepalbhoomi.com">info@nepalbhoomi.com</a>
+                        <a href="mailto:info.nepalbhoomi@gmail.com">info.nepalbhoomi@gmail.com</a>
+                    </p>
+                    <p>
+                        <b>Property Management:</b>
+                        <a href="tel:9818783518">9818783518</a>
+                    </p>
+                    <p>
+                        <b>Buy/Sell:</b>
+                        <a href="tel:9802353660">9802353660</a>
+                    </p>
+                    <p>
+                        <a href="tel:01-4537500">01-4537500</a>
+                        /
+                        <a href="tel:01-4537505">01-4537505</a>
+                    </p>
+                </div>
+
+                <!--------- Office location & hours column --------->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <p class="footer-heading">Location</p>
+                    <p>Lazimpat, Kathmandu — Opposite Image Channel Building</p>
+                    <p>Sun Fri: 9:30 AM 6:00 PM<br>Sat: CLOSED</p>
+                </div>
+
+                <!--------- Quick links column --------->
+                <div class="col-lg-2 col-md-4 col-6">
+                    <p class="footer-heading">Quick Links</p>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="https://nepalbhoomi.com/privacy">Privacy</a>
+                        </li>
+                        <li>
+                            <a href="https://nepalbhoomi.com/services">Services</a>
+                        </li>
+                        <li>
+                            <a href="https://nepalbhoomi.com/job-vacancy">Job Vacancy</a>
+                        </li>
+                        <li>
+                            <a href="https://nepalbhoomi.com/contact-us">Get in Touch</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--------- Company links column --------->
+                <div class="col-lg-2 col-md-4 col-6">
+                    <p class="footer-heading">Company</p>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="https://nepalbhoomi.com/page/about">About Us</a>
+                        </li>
+                        <li>
+                            <a href="https://nepalbhoomi.com/page/our-mission">Our Mission</a>
+                        </li>
+                        <li>
+                            <a href="https://nepalbhoomi.com/contact-us">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--------- Popular search categories column --------->
+                <div class="col-lg-2 col-md-4 col-6">
+                    <p class="footer-heading">Popular Searches</p>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="#">Apartments</a>
+                        </li>
+                        <li>
+                            <a href="#">Business</a>
+                        </li>
+                        <li>
+                            <a href="#">Flat</a>
+                        </li>
+                        <li>
+                            <a href="#">House/Bungalow</a>
+                        </li>
+                        <li>
+                            <a href="#">Land</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
