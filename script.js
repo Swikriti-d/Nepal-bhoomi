@@ -1,4 +1,4 @@
-// ── Hamburger Menu ──
+// ---- Hamburger Menu ----
 document.addEventListener("DOMContentLoaded", function () {
 
     const hamburger = document.getElementById("hamburger");
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// ── Search Tabs Active Toggle ──
+// ---- Search Tabs Active Toggle ----
 document.querySelectorAll('.search-tabs .nav-link').forEach(tab => {
     tab.addEventListener('click', function (e) {
         e.preventDefault();
@@ -23,8 +23,26 @@ document.querySelectorAll('.search-tabs .nav-link').forEach(tab => {
         this.classList.add('active');
     });
 });
-
-// ── Reusable Swiper Init ──
+// ---- Hero Swiper ----
+if (document.querySelector('#heroSwiper')) {
+    new Swiper('#heroSwiper', {
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        navigation: {
+            prevEl: '#heroSwiper .swiper-button-prev',
+            nextEl: '#heroSwiper .swiper-button-next',
+        },
+        pagination: {
+            el: '#heroSwiper .swiper-pagination',
+            clickable: true,
+        },
+    });
+}
+// ---- Reusable Swiper Init ----
 function initSwiper(id, slides = 4) {
     if (typeof Swiper === "undefined") return;
     const element = document.querySelector(id);
@@ -56,7 +74,7 @@ function initSwiper(id, slides = 4) {
     });
 }
 
-// ── Initialize Swipers ──
+// ---- Initialize Swipers ----
 initSwiper('#saleSwiper');
 initSwiper('#rentSwiper');
 initSwiper('#newListingSwiper');
@@ -64,7 +82,7 @@ initSwiper('#freeListingSwiper');
 initSwiper('#testimonialSwiper');
 initSwiper('#relatedSwiper');
 
-// ── Gallery Swiper (Detail Page) ──
+// ---- Gallery Swiper (Detail Page) ----
 const galleryThumbsEl = document.querySelector('.gallery-thumbs');
 const galleryMainEl = document.querySelector('.gallery-main');
 
@@ -89,7 +107,7 @@ if (galleryThumbsEl && galleryMainEl) {
     });
 }
 
-// ── Section Toggle (Detail Page) ──
+// ---- Section Toggle (Detail Page) ----
 function toggleSection(toggleEl) {
     const section = toggleEl.closest('.detail-section');
     const body = section.querySelector('.section-body');
