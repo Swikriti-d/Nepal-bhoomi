@@ -214,12 +214,24 @@ margin: 20px 0 30px;
 font-weight: 400;
 }
 
+#heroSwiper, #heroSwiper .swiper-slide {height: 420px;}
+
+#heroSwiper .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .hero-img {
 width: 100%;
-height: 100%;
-min-height: 420px;
-object-fit: cover;
+    height: 420px;
+    min-height: 420px;
+    max-height: 420px;
+    object-fit: cover;
+    display: block;
 }
+
 
 .search-tabs .nav-link {
 color: #333;
@@ -507,6 +519,21 @@ transition: color 0.2s;
 }
 
 /* ── HERO MOBILE RESPONSIVE ── */
+@media (max-width: 991px) {
+    #heroSwiper,
+    #heroSwiper .swiper-slide {
+        height: 260px;         
+    }
+
+    .hero .row {
+        padding-left: 0;        
+    }
+    .hero-img {
+        height: 260px;
+        min-height: 260px;
+        max-height: 260px;
+    }
+}
 @media (max-width: 767px) {
 .nav{
 justify-content: center;

@@ -90,7 +90,9 @@
     <!------------------- HERO ------------------------>
     <section class="hero">
         <div class="container-fluid px-0">
-            <div class="row">
+            <div class="row g-0 flex-column-reverse flex-lg-row">
+
+                <!-- LEFT-->
                 <div class="col-lg-5 d-flex align-items-center">
                     <div>
                         <h1>Your Trusted<br>Real Estate Partner</h1>
@@ -117,7 +119,6 @@
                             </div>
                             <div class="dropdown">
                                 <button class="search-select dropdown-toggle gap-2" data-bs-toggle="dropdown">
-
                                     <div class="d-flex gap-1 align-items-center">
                                         <img src="icons/ph_money-light.png" class="icon" alt="listing">
                                         Budgets
@@ -134,9 +135,30 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- RIGHT image-->
                 <div class="col-lg-7 px-0">
-                    <img src="image/la2-scaled.webp" alt="Aerial city view" class="hero-img" />
+                    <div class="swiper property-swiper" id="heroSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="image/la2-scaled.webp" alt="Aerial city view" class="hero-img">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="image/clubhouse-tewksbury-usa.jpg" alt="Property view" class="hero-img">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="image/front-white-house-with-blue-fence.jpg" alt="House view" class="hero-img">
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!--  Right Video
+                <div class="col-lg-7 px-0">
+                    <video class="hero-img" autoplay muted loop playsinline disablepictureinpicture preload="auto" poster="image/2.png">
+                        <source src="video/hero-video.mp4" type="video/mp4">
+                    </video>
+                </div> -->
+
             </div>
         </div>
     </section>
