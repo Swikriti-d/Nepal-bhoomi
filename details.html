@@ -260,21 +260,25 @@
 
                     <!--------- Floor Details section--------->
                     <div class="detail-section">
-                        <div class="section-toggle d-flex justify-content-between align-items-center"
-                            onclick="toggleSection(this)">
+                        <div class="section-toggle d-flex justify-content-between align-items-center">
                             <h5>Floor Details</h5>
-                            <i class="fa-solid fa-chevron-up toggle-icon"></i>
                         </div>
-                        <div class="section-body">
-                            <div class="floor-details-row">
+                        <!--1st floor-->
+                        <div class="floor-list">
+                            <div class="floor-toggle d-flex justify-content-between align-items-center"
+                                onclick="toggleFloor(this)">
+                                <h6>1st Floor</h6>
+                                <i class="fa-solid fa-chevron-up floor-toggle-icon"></i>
+                            </div>
+                            <div class="floor-body">
+                                <div class="section-body">  
+                                    <!--------- Floor plan image --------->
+                                    <div class="floor-plan-box">
+                                        <img src="image/floor.png" alt="Floor Plan">
+                                    </div>
 
-                                <!--------- Floor plan image --------->
-                                <div class="floor-plan-box">
-                                    <img src="image/floor.png" alt="Floor Plan">
-                                </div>
-
-                                <!--------- Floor stats grid --------->
-                                <div class="floor-stats-grid">
+                                    <!--------- Floor stats grid --------->
+                                    <div class="floor-stats-grid">
                                         <div>
                                             <label class="label-block">Floor</label>
                                             <span class="value-text">2.5</span>
@@ -303,15 +307,63 @@
                                             <label class="label-block">Area Coverage</label>
                                             <span class="value-text">3 Aana 2 Paisa</span>
                                         </div>
+                                    </div>
                                 </div>
+                            </div>
+                        </div>
+                        <!--2nd floor-->
+                        <div class="floor-list">
+                            <div class="floor-toggle d-flex justify-content-between align-items-center"
+                                onclick="toggleFloor(this)">
+                                <h6>2nd Floor</h6>
+                                <i class="fa-solid fa-chevron-up floor-toggle-icon"></i>
+                            </div>
+                            <div class="floor-body">
+                                <div class="section-body">  
+                                    <!--------- Floor plan image --------->
+                                    <div class="floor-plan-box">
+                                        <img src="image/floor.png" alt="Floor Plan">
+                                    </div>
 
+                                    <!--------- Floor stats grid --------->
+                                    <div class="floor-stats-grid">
+                                        <div>
+                                            <label class="label-block">Floor</label>
+                                            <span class="value-text">2.5</span>
+                                        </div>
+                                        <div>
+                                            <label class="label-block">Bedroom</label>
+                                            <span class="value-text">2</span>
+                                        </div>
+                                        <div>
+                                            <label class="label-block">Bathroom</label>
+                                            <span class="value-text">4</span>
+                                        </div>
+                                        <div>
+                                            <label class="label-block">Kitchen</label>
+                                            <span class="value-text">2</span>
+                                        </div>
+                                        <div>
+                                            <label class="label-block">Living</label>
+                                            <span class="value-text">2</span>
+                                        </div>
+                                        <div>
+                                            <label class="label-block">Balcony</label>
+                                            <span class="value-text">2</span>
+                                        </div>
+                                        <div class="full-width">
+                                            <label class="label-block">Area Coverage</label>
+                                            <span class="value-text">3 Aana 2 Paisa</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!--------- RIGHT COLUMN: Contact / Inquiry Card --------->
+            <!--------- RIGHT COLUMN --------->
             <div class="col-lg-4">
                 <div class="contact-card">
                     <h6>Contact us</h6>
@@ -341,7 +393,39 @@
                     <!--------- Form submit button --------->
                     <button class="btn-submit">Submit</button>
                 </div>
+
+                <div class="share-card">
+                    <h6>Share on:</h6>
+
+                    <div class="share-icons">
+                        <!-- Facebook -->
+                        <a class="share-btn" target="_blank" href="#" rel="noopener">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a class="share-btn" target="_blank" href="#" rel="noopener">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+
+                        <!-- Pinterest -->
+                        <a class="share-btn" target="_blank" href="#" rel="noopener">
+                            <i class="fa-brands fa-pinterest-p"></i>
+                        </a>
+
+                        <!-- Skype -->
+                        <a class="share-btn" target="_blank" href="#" rel="noopener">
+                            <i class="fa-brands fa-skype"></i>
+                        </a>
+
+                        <!-- Copy link -->
+                        <button class="share-btn" type="button" id="copyLinkBtn">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
+        </div>
         </div>
     </section>
 

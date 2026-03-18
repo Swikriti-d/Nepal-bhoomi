@@ -117,3 +117,14 @@ function toggleSection(toggleEl) {
     body.style.display = isOpen ? 'none' : 'block';
     icon.classList.toggle('rotated', isOpen);
 }
+
+// ---- Floor Toggle (Detail Page) ----
+function toggleFloor(toggleEl) {
+    const floorList = toggleEl.closest('.floor-list');
+    const floorBody = floorList.querySelector('.floor-body');
+    const floorIcon = toggleEl.querySelector('.floor-toggle-icon');
+    const isOpen = floorBody.style.display !== 'none';
+
+    floorBody.style.display = isOpen ? 'none' : 'block';
+    floorIcon.classList.toggle('rotated', isOpen);
+}
